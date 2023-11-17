@@ -111,13 +111,13 @@ jobs:
   release:
     strategy:
       matrix:
-        arch: [arm64]
-        version: [16]
+        arch: [amd64]
+        version: [14]
         include:
-          # - arch: amd64
-          #   full_arch: x86_64
-          - arch: arm64
-            full_arch: aarch64
+          - arch: amd64
+            full_arch: x86_64
+          # - arch: arm64
+          #   full_arch: aarch64
     needs: setup
     runs-on: ubuntu-20.04
     if: ${{ needs.setup.outputs.recheck == 'true' }}
@@ -205,7 +205,10 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .          
-          push: true
+          push: true          
+          build-args: |
+            TAGS = pg${{ matrix.version }}-${{ needs.setup.outputs.version }}-${{ matrix.arch }}    
+            POSTGRES_VERSION = ${{ matrix.version }}
           platforms: "linux/${{ matrix.arch }}"
           file: ./docker/pgvecto-rs.Dockerfile
           tags: zhoujinjing09/pgvecto-rs:latest, zhoujinjing09/pgvecto-rs:pg${{ matrix.version }}-${{ needs.setup.outputs.version }}-${{ matrix.arch }}
