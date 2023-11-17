@@ -1,5 +1,5 @@
 ARG TAG=latest
-ARG IMAGEPATH=tensorchord/pgvecto-rs-binary:$TAG
+ARG IMAGEPATH=zhoujinjing09/pgvecto-rs-binary:$TAG
 FROM $IMAGEPATH as binary
 FROM postgres:15
 
