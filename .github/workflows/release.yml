@@ -111,8 +111,8 @@ jobs:
   release:
     strategy:
       matrix:
-        arch: [amd64, arm64]
-        version: [14, 15, 16]
+        arch: [arm64]
+        version: [16]
         include:
           - arch: amd64
             full_arch: x86_64
