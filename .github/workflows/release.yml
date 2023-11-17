@@ -207,8 +207,8 @@ jobs:
           context: .          
           push: true          
           build-args: |
-            TAG = pg${{ matrix.version }}-${{ needs.setup.outputs.version }}-${{ matrix.arch }}    
-            POSTGRES_VERSION = ${{ matrix.version }}
+            TAG=pg${{ matrix.version }}-${{ needs.setup.outputs.version }}-${{ matrix.arch }}    
+            POSTGRES_VERSION=${{ matrix.version }}
           platforms: "linux/${{ matrix.arch }}"
           file: ./docker/pgvecto-rs.Dockerfile
           tags: zhoujinjing09/pgvecto-rs:latest, zhoujinjing09/pgvecto-rs:pg${{ matrix.version }}-${{ needs.setup.outputs.version }}-${{ matrix.arch }}
