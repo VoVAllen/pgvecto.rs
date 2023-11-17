@@ -114,8 +114,8 @@ jobs:
         arch: [arm64]
         version: [16]
         include:
-          - arch: amd64
-            full_arch: x86_64
+          # - arch: amd64
+          #   full_arch: x86_64
           - arch: arm64
             full_arch: aarch64
     needs: setup
