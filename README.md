@@ -1,5 +1,5 @@
 <div align="center">
-<h1>pgvecto.rs</h1>
+<img src="./docs/images/Pgvecto.rs.svg"></img>
 </div>
 
 <p align=center>
@@ -9,7 +9,7 @@
 <a href="https://github.com/tensorchord/pgvecto.rs#contributors-"><img alt="all-contributors" src="https://img.shields.io/github/all-contributors/tensorchord/pgvecto.rs/main"></a>
 </p>
 
-pgvecto.rs is a Postgres extension that provides vector similarity search functions. It is written in Rust and based on [pgrx](https://github.com/tcdi/pgrx). It is currently in the beta status, we invite you to try it out in production and provide us with feedback. Read more at [📝our launch blog](https://modelz.ai/blog/pgvecto-rs).
+pgvecto.rs is a Postgres extension that provides scalable vector similarity search functions. It is written in Rust and based on [pgrx](https://github.com/tcdi/pgrx). It is currently in the beta status, we invite you to try it out in production and provide us with feedback. Read more at [📝our launch blog](https://modelz.ai/blog/pgvecto-rs).
 
 ## Why use pgvecto.rs
 
@@ -130,14 +130,6 @@ WITH (options = $$
 [indexing.ivf]
 quantization = { product = { ratio = "x16" } }
 $$);
-
---- Or using Vamana algorithm.
-
-CREATE INDEX ON items USING vectors (embedding l2_ops)
-WITH (options = $$
-[indexing.vamana]
-$$);
-```
 
 Now you can perform a KNN search with the following SQL simply.
 
