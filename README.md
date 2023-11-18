@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./docs/images/Pgvecto.rs.svg"></img>
+<img src="./docs/images/Pgvecto.rs.svg" width=400 style='margin-bottom: 8px'></img>
 </div>
 
 <p align=center>
