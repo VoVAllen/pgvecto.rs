@@ -1,6 +1,6 @@
 <div align="center">
-<a>
-<img src="./docs/images/Pgvecto.rs.svg" width=400></img>
+<a href="#">
+<img src="./docs/images/Pgvecto.rs.svg" width="400"/>
 </a>
 </div>
 <div>&nbsp;</div>
