@@ -202,7 +202,7 @@ jobs:
           file: ./docker/binary_release.Dockerfile
           tags: zhoujinjing09/pgvecto-rs-binary:pg${{ matrix.version }}-${{ needs.setup.outputs.version }}-${{ matrix.arch }}
   multi_platform_image:
-    needs: 'release'    
+    needs: ['release', 'setup']
     runs-on: ubuntu-20.04
     strategy:
       matrix:
