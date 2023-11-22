@@ -2,7 +2,7 @@ ARG TAG
 ARG POSTGRES_VERSION
 ARG TARGETARCH
 ARG IMAGEPATH=zhoujinjing09/pgvecto-rs-binary:$TAG-$TARGETARCH
-FROM $IMAGEPATH as binary
+FROM zhoujinjing09/pgvecto-rs-binary:${TAG}-${TARGETARCH} as binary
 FROM postgres:$POSTGRES_VERSION
 
 COPY --from=binary /pgvecto-rs-binary-release.deb /tmp/vectors.deb
