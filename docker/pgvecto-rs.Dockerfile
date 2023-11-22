@@ -1,6 +1,7 @@
 ARG TAG
 ARG POSTGRES_VERSION
-ARG IMAGEPATH=tensorchord/pgvecto-rs-binary:$TAG
+ARG TARGETARCH
+ARG IMAGEPATH=zhoujinjing09/pgvecto-rs-binary:$TAG-$TARGETARCH
 FROM $IMAGEPATH as binary
 FROM postgres:$POSTGRES_VERSION
 
